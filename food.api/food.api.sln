@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{38ED2E96-86D0-41BD-8763-B0C6614B217A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - presentation", "1 - presentation", "{5AA97F1C-DAD5-4801-A977-2B7F1F87DF21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - domain", "2 - domain", "{FDB41F99-7624-4EB8-8177-C46491DB8867}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - infrastructure", "3 - infrastructure", "{7AA792F2-5CFC-492C-9D8A-EA1888C3C04E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - testes", "4 - testes", "{B6E8ECDF-5ADB-4D8F-92E7-6116A8883BE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "infrastruture.inmemory", "infrastruture.inmemory\infrastruture.inmemory.csproj", "{CAE139A5-ED91-4D4D-A8BD-654A02AC0BE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "domain", "domain\domain.csproj", "{DF5A3BD0-3C9B-4538-BC3F-288BCA35F78D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testes", "testes\testes.csproj", "{CDD01500-8A43-4117-9417-505539C2BB68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "infrastruture.mongodb", "infrastruture.mongodb\infrastruture.mongodb.csproj", "{882206B0-47A4-4615-B6A1-8B6174646332}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38ED2E96-86D0-41BD-8763-B0C6614B217A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38ED2E96-86D0-41BD-8763-B0C6614B217A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38ED2E96-86D0-41BD-8763-B0C6614B217A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38ED2E96-86D0-41BD-8763-B0C6614B217A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE139A5-ED91-4D4D-A8BD-654A02AC0BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE139A5-ED91-4D4D-A8BD-654A02AC0BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE139A5-ED91-4D4D-A8BD-654A02AC0BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE139A5-ED91-4D4D-A8BD-654A02AC0BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5A3BD0-3C9B-4538-BC3F-288BCA35F78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5A3BD0-3C9B-4538-BC3F-288BCA35F78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5A3BD0-3C9B-4538-BC3F-288BCA35F78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5A3BD0-3C9B-4538-BC3F-288BCA35F78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD01500-8A43-4117-9417-505539C2BB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD01500-8A43-4117-9417-505539C2BB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD01500-8A43-4117-9417-505539C2BB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD01500-8A43-4117-9417-505539C2BB68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882206B0-47A4-4615-B6A1-8B6174646332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882206B0-47A4-4615-B6A1-8B6174646332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882206B0-47A4-4615-B6A1-8B6174646332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882206B0-47A4-4615-B6A1-8B6174646332}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{38ED2E96-86D0-41BD-8763-B0C6614B217A} = {5AA97F1C-DAD5-4801-A977-2B7F1F87DF21}
+		{CAE139A5-ED91-4D4D-A8BD-654A02AC0BE3} = {7AA792F2-5CFC-492C-9D8A-EA1888C3C04E}
+		{DF5A3BD0-3C9B-4538-BC3F-288BCA35F78D} = {FDB41F99-7624-4EB8-8177-C46491DB8867}
+		{CDD01500-8A43-4117-9417-505539C2BB68} = {B6E8ECDF-5ADB-4D8F-92E7-6116A8883BE2}
+		{882206B0-47A4-4615-B6A1-8B6174646332} = {7AA792F2-5CFC-492C-9D8A-EA1888C3C04E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9577E3B9-6909-471E-A104-8484F1801444}
+	EndGlobalSection
+EndGlobal
