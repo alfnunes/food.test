@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace api
 {
@@ -34,7 +35,12 @@ namespace api
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
-            });           
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "food.api", Version = "v1" });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -44,6 +50,13 @@ namespace api
 
             app.UseCors("CorsPolicy"); 
             app.UseMvc();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "food.api-V1");
+            });
 
             var logger = loggerFactory.CreateLogger("Iniciando Log food Api");      
 
