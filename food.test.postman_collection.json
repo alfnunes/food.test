@@ -15,33 +15,31 @@
 	"requests": [
 		{
 			"id": "07979372-d6a5-1599-9997-7c7bc323791f",
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
-					"value": "application/x-www-form-urlencoded",
+					"value": "application/json",
 					"description": "",
 					"enabled": true
 				}
 			],
 			"url": "http://localhost:5000/api/lanche/customizado",
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "POST",
-			"collectionId": "f05e2255-f072-1d4b-7a36-e780cb445490",
 			"data": [],
 			"dataMode": "raw",
-			"name": "Customizar Lanche",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1505367967288,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
+			"time": 1505371628187,
+			"name": "Customizar Lanche",
+			"description": "",
+			"collectionId": "f05e2255-f072-1d4b-7a36-e780cb445490",
+			"responses": [],
 			"rawModeData": "[{\n\t\"Nome\":\"Alface\",\n\t\"Valor\":0.4\n},\n{\n\t\"Nome\":\"Alface\",\n\t\"Valor\":0.4\n},\n{\n\t\"Nome\":\"Bacon\",\n\t\"Valor\":2.0\n}\n]"
 		},
 		{
