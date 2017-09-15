@@ -7,8 +7,13 @@ ENV ASPNETCORE_ENVIRONMENT development
 RUN echo 'America/Sao_Paulo' > /etc/timezone && \
 	apt-get update
 
+
 # Copia os arquivos para a pasta app
 COPY . /app
+
+WORKDIR /app/teste
+
+RUN dotnet test testes.csproj
 
 # seta o workdir
 WORKDIR /app/api

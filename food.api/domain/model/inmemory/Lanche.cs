@@ -18,8 +18,8 @@ namespace domain.model.inmemory
             get { return _total; }
             set
             {
-                var light = Ingredientes.All(i => i.Nome.ToLowerInvariant() == IngredienteEnum.ALFACE.ToDescription() &&
-                                                    i.Nome.ToLowerInvariant() != IngredienteEnum.BACON.ToDescription());
+                var light = Ingredientes.Any(i => i.Nome.Equals(IngredienteEnum.ALFACE.ToDescription())) && 
+                    !Ingredientes.Any(i => i.Nome.Equals(IngredienteEnum.BACON.ToDescription()));
 
                 if (light)
                     _total = value - (value * (0.1M));
@@ -38,13 +38,13 @@ namespace domain.model.inmemory
         /// <param name="ingrediente"></param>
         private void VerificaDescontoIngrediente(IngredienteEnum ingrediente)
         {
-            var total = Ingredientes.Count(i => i.Nome == ingrediente.ToDescription());
-            var qtdePagar = ((total / 3) * 2);
+            var total = Ingredientes.Count(i => i.Nome == ingrediente.ToDescription());          
+            var qtdeDesconto = (total/3);
 
-            if (qtdePagar > 0)
+            if (qtdeDesconto > 0)
             {
                 var valor = Ingredientes.FirstOrDefault(i => i.Nome == ingrediente.ToDescription()).Valor;
-                _total -= ((total - qtdePagar) * valor);
+                _total -= (qtdeDesconto * valor);
             }
         }      
     }
