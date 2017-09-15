@@ -1,0 +1,21 @@
+version: '2'
+ 
+services:
+  app:
+    build: ./food.api  
+    expose:
+      - "5000"
+  web:
+    build: ./food.web  
+    expose:
+      - "3000"  
+  proxy:
+    build:
+      context:  ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "81:81"    
+    links:
+      - app
+      - web     

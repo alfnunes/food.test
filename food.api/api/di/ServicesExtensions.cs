@@ -4,6 +4,8 @@ using domain.services;
 using infrastruture.inmemory.repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
+using System;
 
 namespace api.di
 {
@@ -18,7 +20,7 @@ namespace api.di
             services.AddSingleton<IIngredienteServices, IngredienteServices>();
             services.AddSingleton<IIngredienteRepository, IngredienteRepository>();
 
-            #endregion           
+            #endregion
         }
     }
 }

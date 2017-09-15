@@ -10,20 +10,20 @@ namespace api.controllers
     public class LancheController : Controller
     {
         private readonly ILancheServices _lanche;
-        private readonly IIngredienteServices _ingrediente;
+        private readonly IIngredienteServices _ingrediente;      
 
         public LancheController(ILancheServices lanche)
         {
-            _lanche = lanche;
+            _lanche = lanche;           
         }
-        
+
         [HttpGet]
         [Route("padrao")]
         public IActionResult RetornaTodosLanchesProntos()
         {
             try
             {
-                //retorna todos os lanches padrões do requisito
+                //retorna todos os lanches padrões do requisito              
                 var lanches = _lanche.RetornaTodosLanchesProntos();
                 return StatusCode(200, lanches);
             }
@@ -31,7 +31,7 @@ namespace api.controllers
             {
                 return StatusCode(500, "Erro ao obter os lanches prontos");
             }
-           
+
         }
 
         [HttpPost]

@@ -49,7 +49,7 @@ atualizaTotal = function(){
 }
 
 retornaLanchePadrao = function(){
-    $.get("http://localhost:5000/api/lanche/padrao/", function( data ) {  
+    $.get("http://localhost:81/api/lanche/padrao/", function( data ) {  
         lanchesProntos = data;   
         let html = "";
         for(let i=0; i<data.length; i++) {
@@ -69,7 +69,7 @@ retornaLanchePadrao = function(){
 }
 
 retornaIngredientes = function(){
-    $.get("http://localhost:5000/api/ingrediente/all", function( data ) { 
+    $.get("http://localhost:81/api/ingrediente/all", function( data ) { 
         ingredientes = data;      
         let html = "";
         for(let i=0; i<data.length; i++) {    
@@ -85,7 +85,7 @@ retornaIngredientes = function(){
 retornaLancheCustomizado = function(data){  
 
     $.ajax({
-        url: 'http://localhost:5000/api/lanche/customizado',
+        url: 'http://localhost:81/api/lanche/customizado',
         type: 'post',
         dataType: 'json',
         success: function (result) {

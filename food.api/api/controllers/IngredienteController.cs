@@ -7,13 +7,13 @@ namespace api.controllers
     [Route("api/[controller]")]
     public class IngredienteController : Controller
     {
-        private readonly IIngredienteServices _ingrediente;
+        private readonly IIngredienteServices _ingrediente;      
 
         public IngredienteController(IIngredienteServices ingrediente)
         {
-            _ingrediente = ingrediente;
+            _ingrediente = ingrediente;           
         }
-        
+
         [HttpGet]
         [Route("all")]
         public IActionResult RetornaTodosIngredientes()
@@ -26,9 +26,9 @@ namespace api.controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Erro ao obter os ingredientes");
+                return StatusCode(500, ex.Message);
             }
-           
+
         }
     }
 }
